@@ -1,13 +1,13 @@
 # 第二週作業
 
-## week0203
+## week0203 `csv` `zip`
 [新北市公共自行車即時資訊](https://data.ntpc.gov.tw/datasets/71CD1490-A2DF-4198-BEF1-318479775E8A)\
 針對新北市公共自行車即時資訊，撰寫程式，下載ZIP檔案，
 印出空位數量超過 4 (>=4) 的場站資料，包含
 sno：站點代號、sna：場站名稱、tot：場站總停車格、sbi：場站目前車輛數量、ar：地址(中文)、bemp：空位數量
 將程式碼和結果截圖上傳
 
-## week 0204
+## week 0204 `csv`
 [全國環境輻射偵測即時資訊](https://www.aec.gov.tw/dataopen/index.php?id=2)\
 針對全國環境輻射偵測即時資訊，寫Python程式
 
@@ -27,12 +27,12 @@ sno：站點代號、sna：場站名稱、tot：場站總停車格、sbi：場�
 (121-2, 121+2) ~ (25-2, 25+2) 包含區域的監測站的資料
 
 貼上你的code
-## week 0205
+## week 0205 `json`
 [新北市公共自行車即時資訊](https://data.ntpc.gov.tw/datasets/71CD1490-A2DF-4198-BEF1-318479775E8A)\
 針對新北市公共自行車即時資訊，寫一隻程式，讀取 json格式檔案，印出【場站目前車輛數量】超過 5 (>=5) 的場站資料，以目前數量大小排(小->大)顯示包含sno：站點代號、sna：場站名稱、tot：場站總停車格、sbi：場站目前車輛數量、ar：地址(中文)、bemp：空位數量
 
 貼上你的 code
-## week 0206
+## week 0206 `json` `xml`
 ```xml
 <?xml version="1.0"?>
 <menu>
@@ -56,7 +56,7 @@ sno：站點代號、sna：場站名稱、tot：場站總停車格、sbi：場�
     * barbecue: $25
 
 轉成 json 格式存檔成 menu.json
-## week 0208
+## week 0208 `xml`
 ```xml
 <?xml version="1.0"?>
 <data>
