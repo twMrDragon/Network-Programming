@@ -17,7 +17,7 @@ for country in root:
         country.find("gdppc").text = "88888"
 
 # 寫入xml檔案
-tree.write("cont2.xml",xml_declaration=True)
+tree.write("cont2.xml",xml_declaration=True,encoding="utf-8")
 
 # 讀取cont2.xml
 tree = et.parse("cont2.xml")
