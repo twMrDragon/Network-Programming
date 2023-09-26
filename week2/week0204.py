@@ -5,6 +5,8 @@ import os
 
 # ssl設定
 ssl._create_default_https_context = ssl._create_unverified_context
+# 獲取當前資料夾
+scriptDir = os.path.dirname(__file__)
 
 # 取得用戶輸入
 x, y = map(int, input().split(" "))
@@ -12,7 +14,7 @@ dX,dY = int(input()),int(input())
 
 # 下載csv
 url = "https://www.aec.gov.tw/dataopen/index.php?id=2"
-donwloadFilename = "pmi.csv"
+donwloadFilename = os.path.join(scriptDir,"pmi.csv")
 urllib.request.urlretrieve(url, donwloadFilename)
 
 # 讀取csv

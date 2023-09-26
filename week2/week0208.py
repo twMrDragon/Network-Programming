@@ -1,7 +1,13 @@
 import xml.etree.ElementTree as et
+import os
+
+# 獲取當前資料夾
+scriptDir = os.path.dirname(__file__)
+contXmlFilename = os.path.join(scriptDir,"cont.xml")
+cont2XmlFilename = os.path.join(scriptDir,"cont2.xml")
 
 # 讀取cont.xml
-tree = et.parse("cont.xml")
+tree = et.parse(contXmlFilename)
 root = tree.getroot()
 
 # 遍歷
@@ -17,10 +23,10 @@ for country in root:
         country.find("gdppc").text = "88888"
 
 # 寫入xml檔案
-tree.write("cont2.xml",xml_declaration=True,encoding="utf-8")
+tree.write(cont2XmlFilename,xml_declaration=True,encoding="utf-8")
 
 # 讀取cont2.xml
-tree = et.parse("cont2.xml")
+tree = et.parse(cont2XmlFilename)
 root = tree.getroot()
 
 # 遍歷

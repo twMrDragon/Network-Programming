@@ -1,12 +1,18 @@
 import xml.etree.ElementTree as et
 import json
+import os
+
+# 獲取當前資料夾
+scriptDir = os.path.dirname(__file__)
+xmlFilename = os.path.join(scriptDir,"menu.xml")
+jsonFilename = os.path.join(scriptDir,"meun.json")
 
 # 稍後加入的資料
 nightSnackItems = ["beer","skewers","barbecue"]
 nightSnackPrices = ["$15","$20","$25"]
 
 # 讀取xml檔案
-tree = et.parse("menu.xml")
+tree = et.parse(xmlFilename)
 root = tree.getroot()
 # 建立Night snack element
 nightSnack = et.Element("Night snack")
@@ -35,5 +41,5 @@ for menuChild in root:
     menuDict[menuChild.tag]=menuChildDict
     
 # 寫入json file
-with open("menu.json",'w') as jsonFile:
+with open(jsonFilename,'w') as jsonFile:
     json.dump({"menu":menuDict},jsonFile)

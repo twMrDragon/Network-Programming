@@ -5,14 +5,16 @@ import json
 
 # ssl設定
 ssl._create_default_https_context = ssl._create_unverified_context
+# 獲取當前資料夾
+scriptDir = os.path.dirname(__file__)
 
 # 下載json檔案
 url = "https://data.ntpc.gov.tw/api/datasets/71CD1490-A2DF-4198-BEF1-318479775E8A/json/preview"
-filename = "ubike.json"
+filename = os.path.join(scriptDir,"ubike.json")
 urllib.request.urlretrieve(url,filename)
 
 # 開啟json檔案
-with open("ubike.json",encoding="utf8") as jsonFile:
+with open(filename,encoding="utf8") as jsonFile:
     jsonArray = json.load(jsonFile)
     # 根據sbi(站點目前車輛數量)排序
     jsonArray.sort(key = lambda x:int(x['sbi']))
