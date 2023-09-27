@@ -42,4 +42,4 @@ for menuChild in root:
     
 # 寫入json file
 with open(jsonFilename,'w') as jsonFile:
-    json.dump({"menu":menuDict},jsonFile)
+    json.dump({"menu":menuDict},jsonFile,indent=2)
