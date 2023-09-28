@@ -8,10 +8,6 @@ import os
 scriptDir = os.path.dirname(__file__)
 excelFile = os.path.join(scriptDir,"7_11.xlsx")
 
-# # 刪除先前檔案
-# if os.path.exists(excelFile):
-#     os.remove(excelFile)
-
 # 獲取所有城市選項
 def getCitySelection():
     html = requests.get("https://www.ibon.com.tw/retail_inquiry.aspx")
@@ -28,7 +24,7 @@ roadAddressRecord = {}
 allCitySelection = getCitySelection()
 for index,city in enumerate(allCitySelection):
     data = {'strTargetField':'COUNTY','strKeyWords':city}
-    # 抓取城市所有店面
+    # 抓取該城市所有店面
     res = requests.post("https://www.ibon.com.tw/retail_inquiry_ajax.aspx",data=data)
     city711Store = pd.read_html(StringIO(res.text), header=0)[0]
     count = city711Store.shape[0]
@@ -46,17 +42,12 @@ for index,city in enumerate(allCitySelection):
             roadAddressRecord[roadAddress]=1
         else:
             roadAddressRecord[roadAddress]+=1
-    # if index == 0:
-    #     city711Store = pd.read_html(StringIO(res.text), header=0)[0]
-    #     city711Store['city']=city
-    # elif index>0:
-    #     oneCityStore = pd.read_html(StringIO(res.text), header=0)[0]
-    #     oneCityStore['city']=city
-    #     # city711Store = pd.concat([city711Store,oneCityStore])
+    # 列印抓取進度
     print("%2d) %-*s %4d"%(index+1,5,city,pd.read_html(StringIO(res.text), header=0)[0].shape[0]))
-# print(roadAddressRecord)roadAddressRecord = sorted(roadAddressRecord.items(),key=lambda x:x[1],reverse=True)
+
+# 根據路的數量做排序
+roadAddressRecord = sorted(roadAddressRecord.items(),key=lambda x:x[1],reverse=True)
+# 列印全台灣前三多的路
 for i in range(3):
     roadAddress,count = roadAddressRecord[i]
     print("%s:%d"%(roadAddress,count))
-# print(city711Store)
-# city711Store.to_excel(excelFile)

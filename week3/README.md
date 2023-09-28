@@ -1,6 +1,6 @@
 # 第二週作業
 
-## week0302 `html爬蟲`
+## week0302 `BeautifulSoup` `html爬蟲`
 查詢台銀牌告匯率\
 找出現金買入和賣出利差最多的前三名
 
@@ -19,7 +19,7 @@ url="https://tw.stock.yahoo.com/quote/0050.TW/dividend"
 
 upload code
 
-## week0304
+## week0304 `Api Get` `API Post` `BeautifulSoup` `pandas` 
 查詢三個城市
 
 找出小七店最多個數的街/路前三名
