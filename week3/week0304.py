@@ -2,11 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 from io import StringIO
-import os
-
-# 獲取當前資料夾
-scriptDir = os.path.dirname(__file__)
-excelFile = os.path.join(scriptDir,"7_11.xlsx")
 
 # 獲取所有城市選項
 def getCitySelection():
