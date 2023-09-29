@@ -1,11 +1,18 @@
 import pandas as pd
 import requests
+import os
 from io import StringIO
 
 # 從網路取得新北市ubike資料
-jsonUrl = 'https://data.ntpc.gov.tw/api/datasets/71CD1490-A2DF-4198-BEF1-318479775E8A/json?size=1000'
-response = requests.get(jsonUrl)
-bikeDataFrame = pd.read_json(StringIO(response.text))
+# jsonUrl = 'https://data.ntpc.gov.tw/api/datasets/71CD1490-A2DF-4198-BEF1-318479775E8A/json?size=1000'
+# response = requests.get(jsonUrl)
+# bikeDataFrame = pd.read_json(StringIO(response.text))
+
+# 從本地讀取ubike資料
+# 獲取當前資料夾
+currentDir = os.path.dirname(__file__)
+jsonFile = os.path.join(currentDir,"bike.json")
+bikeDataFrame = pd.read_json(jsonFile)
 
 # 空位數大於 10 的站點資料
 bikeBempMoreThan10 = bikeDataFrame[bikeDataFrame['bemp']>=10]
