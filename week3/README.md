@@ -11,8 +11,8 @@ upload code
 https://tw.stock.yahoo.com/tw-etf/volume
 
 逐一取代網址\
-url="https://tw.stock.yahoo.com/quote/0050.TW/dividend"\
-url="https://tw.stock.yahoo.com/quote/0050.TW/dividend"\
+url="https://tw.stock.yahoo.com/quote/0050.TW/dividend" \
+url="https://tw.stock.yahoo.com/quote/0050.TW/dividend" \
 ...
 
 2023年現金股利最多的三檔股票代號名稱和股利
@@ -27,7 +27,7 @@ upload code
 upload code
 
 ## week0305 `pandas`
-https://storage.googleapis.com/learn_pd_like_tidyverse/gapminder.xlsx\
+https://storage.googleapis.com/learn_pd_like_tidyverse/gapminder.xlsx \
 使用 pandas\
 計算 2002 年全球人口各國平均數\
 計算 2002 年全球各洲平均壽命、平均財富\
