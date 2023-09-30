@@ -6,6 +6,7 @@ from io import StringIO
 # 獲取所有城市選項
 def getCitySelection():
     html = requests.get("https://www.ibon.com.tw/retail_inquiry.aspx")
+    # lxml 需安裝 pip install lxml
     bsObj = BeautifulSoup(html.content,"lxml")
     result = []
     for countryItem in bsObj.find("select",{"name":"FirstClass"}).findAll("option"):
