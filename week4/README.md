@@ -1,6 +1,6 @@
 # 第四周作業
 
-## week0401
+## week0401 `numpy` `pandas`
 用隨機方式產生分數cs (計概), pd(程式設計), 資料集
 1. 四個學生，id, name, cs, pd,rank(缺失值)
 2. 建構出 dataframe
@@ -9,7 +9,7 @@
 5. 列出 cs 大於等於50 的name和 pd資料
 upload code
 
-## week0402
+## week0402 `pandas`
 使用 Pandas，載入 president_heights.csv
 https://drive.google.com/file/d/1fSYtcNDiG3wadQ5LovmZbdUA6GzLdDhx/view?usp=sharing
 
@@ -33,7 +33,7 @@ https://drive.google.com/file/d/1fSYtcNDiG3wadQ5LovmZbdUA6GzLdDhx/view?usp=shari
 決策樹參考講義(使用網球資料集)
 https://drive.google.com/file/d/1fzVfSohP8Nl_jnzAbXv4NoaPVE4Y63i_/view?usp=sharing
 
-## week 0404
+## week 0404 `BeautifulSoup`
 
 輸入一組統一編號
 輸出是否中二百元，或者差一個號碼中兩百元
@@ -46,7 +46,7 @@ https://drive.google.com/file/d/1fzVfSohP8Nl_jnzAbXv4NoaPVE4Y63i_/view?usp=shari
 
 upload code
 
-## week0405
+## week0405 `json` `pandas` `sqlalchemy`
 
 環保署AQI 公開資料集
 
