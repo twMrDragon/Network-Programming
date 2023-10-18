@@ -13,6 +13,9 @@ def getCitySelection():
         result.append(countryItem.text)
     return result   
 
+# 所有條件成立的店面(最後印出) 
+allTargetStore = []
+
 # user input
 street = str(input())
 
@@ -20,8 +23,8 @@ street = str(input())
 allCitySelection = getCitySelection()
 for index,city in enumerate(allCitySelection):
     data = {'strTargetField':'COUNTY','strKeyWords':city}
-    currentStore = []
     # 抓取該城市所有店面
+    currentStore = []
     res = requests.post("https://www.ibon.com.tw/retail_inquiry_ajax.aspx",data=data)
     city711Store = pd.read_html(StringIO(res.text), header=0)[0]
     count = city711Store.shape[0]
@@ -50,5 +53,8 @@ for index,city in enumerate(allCitySelection):
     
     # 排序
     currentStore.sort(key=lambda x:x['storeSort'])
-    for store in currentStore:
-        print(*list(store.values())[:3])
+    allTargetStore.extend(currentStore)
+
+# 列印
+for store in allTargetStore:
+    print(*list(store.values())[:3])
