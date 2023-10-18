@@ -13,6 +13,7 @@ m = int(input())
 monthUrl = baseUrl+str(m-((m+1) % 2))+'/'
 html = requests.get(monthUrl)
 soup = BeautifulSoup(html.content, "html.parser")
+
 # 找出獎項及中獎號碼
 prices = {}
 table = soup.find("table")
