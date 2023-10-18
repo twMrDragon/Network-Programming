@@ -29,22 +29,26 @@ for index,city in enumerate(allCitySelection):
     for i in range(count):
         # 第三欄資料為地址 iloc[i,2]
         fullAddress = city711Store.iloc[i,2]
-        currentSort = 0
-        hasStart = False
-        digit = '1234567890'
-        for d in fullAddress:
-            if d in digit:
-                hasStart=True
-                currentSort=currentSort*10+int(d)
-            elif hasStart:
-                break
+        # 如果包含查詢路名
         if street in fullAddress:
+            # 找出排序號碼
+            currentSort = 0
+            hasStart = False
+            digit = '1234567890'
+            for d in fullAddress:
+                if d in digit:
+                    hasStart=True
+                    currentSort=currentSort*10+int(d)
+                elif hasStart:
+                    break
             currentStore.append({
                 'storeNum':city711Store.iloc[i,0],
                 'storeName':city711Store.iloc[i,1],
                 'storeFullAddress':city711Store.iloc[i,2],
                 'storeSort':currentSort
             })
+    
+    # 排序
     currentStore.sort(key=lambda x:x['storeSort'])
     for store in currentStore:
         print(*list(store.values())[:3])

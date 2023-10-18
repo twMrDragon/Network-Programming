@@ -22,7 +22,7 @@ for tr in tbody.findAll('tr'):
 # 排序
 earthQuakes.sort(key=lambda x:[float(x['scale']),float(x['deep'])])
 
-# 輸出
+# 列印
 print('地震時間 深度 規模 地震位置')
 for item in earthQuakes[:3]:
     print(item['time'],item['deep'],item['scale'],item['location'])

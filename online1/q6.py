@@ -6,6 +6,7 @@ import pandas as pd
 # 獲取當前資料夾
 scriptDir = os.path.dirname(__file__)
 
+# 下載xml
 url =  'https://data.ntpc.gov.tw/api/datasets/3c6411d8-57be-462c-add4-046d86bf5de4/xml/preview'
 xmlFilename = os.path.join(scriptDir,"data1.xml")
 xmlFilename2 = os.path.join(scriptDir,"data2.xml")

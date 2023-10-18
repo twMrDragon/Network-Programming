@@ -45,6 +45,4 @@ for index, row in df.head(5).iterrows():
     print(index, row['num'])
 
 # 清理檔案
-if IS_DWONLOAD_ZIP:
-    os.remove(zipName)
 os.remove(csvFilename)
