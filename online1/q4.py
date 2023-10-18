@@ -39,7 +39,7 @@ for index, row in df.head(5).iterrows():
 # 4-2
 n = int(input())
 df = df[df['num'] >= n].sort_values(
-    by=['num', 'routeId'], ascending=[True, False])
+    by=['num', 'routeId'], ascending=[True, True])
 print('routeId num')
 for index, row in df.head(5).iterrows():
     print(index, row['num'])
