@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-#
+# 發票號碼網站前綴
 baseUrl = 'https://www.etax.nat.gov.tw/etw-main/ETW183W2_1120'
 
 # user input
