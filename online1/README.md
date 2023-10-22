@@ -1,36 +1,40 @@
 # 2023/10/11 上機考
+
 考試規則
+
 1. 可以查詢任何資料，包含網路資料。
 2. 不可以跟同學以任何形式討論，包含任何網路通訊系統、軟體、設備。
 3. 在 10/11 16:00 前舉手給助教批改完成，一題 10 分。
-4. 在 10/18 13:00前完成，並於10/18 助教時間給助教批改完成，一題 7 分。
+4. 在 10/18 13:00 前完成，並於 10/18 助教時間給助教批改完成，一題 7 分。
 5. 助教批改時，除檢視正確輸出輸入外，得詢問程式意義，完全正確才給該題分數。
 
 ## Q1
+
 Q1-1.
 
 https://www.apple.com/tw/iphone-15-pro/specs/<br>
 請針對以上網站做爬蟲，輸出下方資訊:<br>
-iPhone 15 Pro資訊:<br>
+iPhone 15 Pro 資訊:<br>
 容量: (共四種 在同一行輸出 不限格式分隔)<br>
 顏色: (共四種 在同一行輸出不限格式分隔)<br>
-重量: (輸出重量，例: 300g或300 公克)<br>
-螢幕大小: (輸出吋，例: 5.5吋或5.5")<br>
+重量: (輸出重量，例: 300g 或 300 公克)<br>
+螢幕大小: (輸出吋，例: 5.5 吋或 5.5")<br>
 
-完成後舉手由助教檢查執行結果，上傳 Code，請勿直接將答案Hard Code並輸出，若以此方式輸出，不予給分。
+完成後舉手由助教檢查執行結果，上傳 Code，請勿直接將答案 Hard Code 並輸出，若以此方式輸出，不予給分。
 
 ## Q2
+
 Q1-2.
 
 財政部統一發票兌獎網頁
 
-1 ~ 2 月中獎號碼url：
+1 ~ 2 月中獎號碼 url：
 https://www.etax.nat.gov.tw/etw-main/ETW183W2_11201/<br>
-3 ~ 4月中獎號碼url：
+3 ~ 4 月中獎號碼 url：
 https://www.etax.nat.gov.tw/etw-main/ETW183W2_11203/<br>
-5 ~ 6 月中獎號碼url：
+5 ~ 6 月中獎號碼 url：
 https://www.etax.nat.gov.tw/etw-main/ETW183W2_11205/<br>
-7 ~ 8 月中獎號碼url：
+7 ~ 8 月中獎號碼 url：
 https://www.etax.nat.gov.tw/etw-main/ETW183W2_11207/<br>
 
 請依照輸入的統一發票號碼，並查看輸入的對應兌獎月份，以網路爬蟲的方式取得獎項號碼及獎項敘述。最後輸出所有兌中的發票資訊，並計算所有兌中發票的總獎金。<br>
@@ -39,15 +43,16 @@ https://www.etax.nat.gov.tw/etw-main/ETW183W2_11207/<br>
 完成後舉手由助教檢查執行結果，上傳 Code。
 
 輸入說明：<br>
-第一行輸入N，總計要兌幾張發票。<br>
-第二行至第N+1行輸入N 組統一發票號碼。<br>
-第N+2行輸入M，代表月份，範圍為1到8月。<br>
+第一行輸入 N，總計要兌幾張發票。<br>
+第二行至第 N+1 行輸入 N 組統一發票號碼。<br>
+第 N+2 行輸入 M，代表月份，範圍為 1 到 8 月。<br>
 
 輸出說明：
-第一行至N行，輸出每一張發票兌中該月份哪一個獎及該獎獎金，以及該獎的敘述。若沒有兌中則不輸出。
-第N+1行，輸出加總的獎金。
+第一行至 N 行，輸出每一張發票兌中該月份哪一個獎及該獎獎金，以及該獎的敘述。若沒有兌中則不輸出。
+第 N+1 行，輸出加總的獎金。
 
 範例輸入：
+
 ```
 3
 29268886
@@ -57,6 +62,7 @@ https://www.etax.nat.gov.tw/etw-main/ETW183W2_11207/<br>
 ```
 
 範例輸出：
+
 ```
 29268886 特別獎 10000000 同期統一發票收執聯8位數號碼與特別獎號碼相同者獎金1,000萬元
 12999667 頭獎 200000 同期統一發票收執聯8位數號碼與頭獎號碼相同者獎金20萬元
@@ -64,23 +70,25 @@ https://www.etax.nat.gov.tw/etw-main/ETW183W2_11207/<br>
 ```
 
 ## Q3
-此題因學校DNS有問題，需手動加入Hosts<br>
-以Vscode 打開<br>
+
+此題因學校 DNS 有問題，需手動加入 Hosts<br>
+以 Vscode 打開<br>
 Windows: C:\Windows\System32\drivers\etc\hosts<br>
 Mac: /etc/hosts<br>
 新增在最下方<br>
 61.56.14.44 scweb.cwa.gov.tw<br>
-存檔後右下角會顯示Retry as Admin，按下後確認已存檔即可開始作答<br>
+存檔後右下角會顯示 Retry as Admin，按下後確認已存檔即可開始作答<br>
 
 地震測報中心-台灣地震<br>
 url='https://scweb.cwa.gov.tw/'
 
-請列出在台灣規模最小的前3筆地震的資訊(地震時間、深度、規模、地震位置)，若規模相同則再以深度由淺至深排序。
+請列出在台灣規模最小的前 3 筆地震的資訊(地震時間、深度、規模、地震位置)，若規模相同則再以深度由淺至深排序。
 
 輸出說明：<br>
-台灣規模最小的前3筆地震資訊(地震時間、深度、規模、地震位置)。
+台灣規模最小的前 3 筆地震資訊(地震時間、深度、規模、地震位置)。
 
 範例輸出：
+
 ```
 地震時間 深度 規模 地震位置
 10/01 02:48 18.8 3.4 臺東縣成功鎮
@@ -91,16 +99,17 @@ url='https://scweb.cwa.gov.tw/'
 完成後舉手由助教檢查執行結果，上傳 Code。
 
 ## Q4
+
 Q1-4
 
 公車站位資訊<br>
 url = 'https://data.ntpc.gov.tw/api/datasets/34b402a8-53d9-483d-9406-24a682c2d6dc/csv/zip'<br>
-需使用程式碼下載並解壓縮此zip檔，再使用csv讀取解壓縮出來的csv檔。
+需使用程式碼下載並解壓縮此 zip 檔，再使用 csv 讀取解壓縮出來的 csv 檔。
 
 註:<br>
 站位數量是以計算的方式取得。<br>
 站位數量的計算方式: 有相同路線代碼(routeId)的資料筆數，加總的數量。<br>
-站位數量的欄位名稱以num代表。<br>
+站位數量的欄位名稱以 num 代表。<br>
 
 4-1.<br>
 請篩選出最多站位數量的前五個路線代碼資訊。
@@ -109,17 +118,18 @@ url = 'https://data.ntpc.gov.tw/api/datasets/34b402a8-53d9-483d-9406-24a682c2d6d
 路線代碼資訊(routeId、站位數量)，站位數量相同以路線代碼由小到大排序。
 
 4-2.<br>
-請篩選出大於或等於N個站位數量的前五個路線代碼資訊。
+請篩選出大於或等於 N 個站位數量的前五個路線代碼資訊。
 
 輸入說明：<br>
-第一行輸入N，代表N個站位數量。<br>
+第一行輸入 N，代表 N 個站位數量。<br>
 輸出說明：<br>
-先以routeId由小到大排序後的前五個路線代碼資訊(routeId、站位數量)。
+先以 routeId 由小到大排序後的前五個路線代碼資訊(routeId、站位數量)。
 
 完成後舉手由助教檢查執行結果，上傳 Code。
 
 4-1.<br>
 範例輸出：
+
 ```
 routeId num
 17528 261
@@ -128,12 +138,16 @@ routeId num
 16695 176
 16591 173
 ```
+
 4-2.<br>
 範例輸入：
+
 ```
 100
 ```
+
 範例輸出：
+
 ```
 routeId num
 10148 100
@@ -144,6 +158,7 @@ routeId num
 ```
 
 ## Q5
+
 Q1-5.
 新北市路邊停車空位查詢(json)<br>
 url = 'https://data.ntpc.gov.tw/api/datasets/54a507c4-c038-41b5-bf60-bbecb9d052c6/json/preview'
@@ -151,7 +166,7 @@ url = 'https://data.ntpc.gov.tw/api/datasets/54a507c4-c038-41b5-bf60-bbecb9d052c
 部分欄位說明：<br>
 DAY(收費天)、HOUR(收費時段)、PAY(收費形式)、ROADNAME(路段名稱)、CELLSTATUS(車格狀態判斷)
 
-請使用程式碼讀取json格式檔案，列出車格狀態判斷為是且付費形式為計時收費的前五筆停車空位資訊。
+請使用程式碼讀取 json 格式檔案，列出車格狀態判斷為是且付費形式為計時收費的前五筆停車空位資訊。
 
 完成後舉手由助教檢查執行結果，上傳 Code。
 
@@ -159,6 +174,7 @@ DAY(收費天)、HOUR(收費時段)、PAY(收費形式)、ROADNAME(路段名稱)
 依照條件的前五筆停車空位資訊(ROADNAME, DAY, HOUR)。
 
 範例輸出:
+
 ```
 ROADNAME DAY HOUR
 建國一路 週一-週五 07:00-20:00
@@ -169,14 +185,16 @@ ROADNAME DAY HOUR
 ```
 
 ## Q6
+
 Q1-6.
 新北市公車路線說明及示意圖-一般路線<br>
 url = 'https://data.ntpc.gov.tw/api/datasets/3c6411d8-57be-462c-add4-046d86bf5de4/xml/preview'
 
-請將此xml資料存取為data1.xml，再使用程式碼讀取data1.xml，並依照下方步驟進行操作。
+請將此 xml 資料存取為 data1.xml，再使用程式碼讀取 data1.xml，並依照下方步驟進行操作。
 
-步驟1：將seqno : 23 資訊改為 25<br>
-步驟2：新增一個row<br>
+步驟 1：將 seqno : 23 資訊改為 25<br>
+步驟 2：新增一個 row<br>
+
 ```xml
 <row>
 	<type>一般路線</type>
@@ -189,13 +207,14 @@ url = 'https://data.ntpc.gov.tw/api/datasets/3c6411d8-57be-462c-add4-046d86bf5de
 </row>
 ```
 
-步驟3：將上述兩步修改後的資料寫入data2.xml<br>
-步驟4：讀取data2.xml，篩選出去程的時間為6點到21點且返程時間為6點到21點的一般路線資訊。<br>
+步驟 3：將上述兩步修改後的資料寫入 data2.xml<br>
+步驟 4：讀取 data2.xml，篩選出去程的時間為 6 點到 21 點且返程時間為 6 點到 21 點的一般路線資訊。<br>
 
 輸出說明：<br>
-列出平日的去程時間(weekday_operation_hours)為6點到21點且返程時間為6點到21點的一般路線資訊(seqno, routename, start_and_end)，並且依照seqno進行排序。
+列出平日的去程時間(weekday_operation_hours)為 6 點到 21 點且返程時間為 6 點到 21 點的一般路線資訊(seqno, routename, start_and_end)，並且依照 seqno 進行排序。
 
 範例輸出：
+
 ```
 seqno routename start_and_end
 12 290副 景明街口-溪園路
@@ -205,9 +224,11 @@ seqno routename start_and_end
 ```
 
 ## Q7
+
 Q1-7.<br>
 https://www.intel.com.tw/content/www/tw/zh/products/sku/230490/intel-core-i713700-processor-30m-cache-up-to-5-20-ghz/specifications.html<br>
 針對以上處理器資訊頁做爬蟲，輸出以下資訊：
+
 ```
 處理器編號: i7-13700
 核心數量: 16
@@ -219,11 +240,12 @@ https://www.intel.com.tw/content/www/tw/zh/products/sku/230490/intel-core-i71370
 繪圖基頻: 300 Mhz
 ```
 
-完成後舉手由助教檢查執行結果，上傳 Code，請勿直接將答案Hard Code並輸出，若以此方式輸出，不予給分。
+完成後舉手由助教檢查執行結果，上傳 Code，請勿直接將答案 Hard Code 並輸出，若以此方式輸出，不予給分。
 
 ## Q8
+
 Q1-8.<br>
-ibon便利生活站門市查詢<br>
+ibon 便利生活站門市查詢<br>
 url='https://www.ibon.com.tw/retail_inquiry.aspx#gsc.tab=0'
 
 輸入說明：
@@ -240,11 +262,13 @@ url='https://www.ibon.com.tw/retail_inquiry.aspx#gsc.tab=0'
 完成後舉手由助教檢查執行結果，上傳 Code。
 
 範例輸入：
+
 ```
 青年路
 ```
 
 範例輸出：
+
 ```
 店號 店名 地址
 903831 日南 台中市大甲區日南里青年路130號
@@ -257,8 +281,9 @@ url='https://www.ibon.com.tw/retail_inquiry.aspx#gsc.tab=0'
 ```
 
 # Q9
+
 Q1-9.<br>
-查詢台股ETF中，以下網址資料前十名(頁面編號前10)，找出股票代號<br>
+查詢台股 ETF 中，以下網址資料前十名(頁面編號前 10)，找出股票代號<br>
 https://tw.stock.yahoo.com/tw-etf/volume
 
 逐一取代網址為<br>
@@ -266,9 +291,10 @@ url="https://tw.stock.yahoo.com/quote/0050.TW/performance"<br>
 url="https://tw.stock.yahoo.com/quote/0050.TW/performance"<br>
 ...
 
-請找出"1周"期間績效表現最高的前三檔股票代號和績效百分比
+請找出"1 周"期間績效表現最高的前三檔股票代號和績效百分比
 
 範例輸出:
+
 ```
 00715L.TW 18.83%
 00712.TW 4.96%
