@@ -41,7 +41,7 @@ int main()
     if (shm_id < 0)
     {
         perror("shmget");
-        printf("shm create fail");
+        printf("shm creat fail");
         exit(1);
     }
     // attach 共享記憶體到本 process的變數
