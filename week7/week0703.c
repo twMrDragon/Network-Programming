@@ -59,7 +59,8 @@ void calculatePIWithMultipleProcesses()
 
     // 主 process
     *sharedData += calculateNItemOfPI(1, 7);
-    wait(NULL);
+    // 等待所有子程序
+    while (wait(NULL) > 0);
     printf("%lf\n", *sharedData);
 
     // 解除共享記憶體
@@ -98,13 +99,13 @@ int main()
     clock_gettime(CLOCK_REALTIME, &endTime);
     printf("%lf ms\n", (endTime.tv_sec - startTime.tv_sec) * 1000.0 + (endTime.tv_nsec - startTime.tv_nsec) / 1000000.0); // 毫秒
 
-/*     last run
-    Multiple Processes:
-    3.058403
-    0.824706 ms
-    Single Process:
-    3.058403
-    0.002858 ms */
+    /*     last run
+        Multiple Processes:
+        3.058403
+        0.824706 ms
+        Single Process:
+        3.058403
+        0.002858 ms */
 
     return 0;
 }
