@@ -8,7 +8,7 @@
 #include <unistd.h>
 #define SHM_SIZE 50
 
-char *replaceAllSubstring(char *origin, char *target)
+void replaceAllSubstring(char *origin, char *target)
 {
     size_t targetLen = strlen(target);
     char *p = strstr(origin, target);
