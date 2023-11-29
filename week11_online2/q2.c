@@ -66,11 +66,11 @@ int main(void)
             {
                 write(fd, line, strlen(line));
             }
-            if (strstr(line, "MemAvailable"))
+            else if (strstr(line, "MemFree"))
             {
                 write(fd, line, strlen(line));
             }
-            if (strstr(line, "MemFree"))
+            else if (strstr(line, "MemAvailable"))
             {
                 write(fd, line, strlen(line));
                 break;
