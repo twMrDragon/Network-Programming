@@ -14,13 +14,16 @@
 - Week10 (11/15): 網路程式安全實作 I
 - Week11 (11/22): 實作Quiz II, 繳交 Term Project 規劃報告 -->
 
-- week1 前測+虛擬機說明
-- week2 網路爬蟲
-- week3 網路爬蟲
-- week4 網路爬蟲
-- week5 上機考 1
-- week6 Linux 核心編譯
-- week7 Linux Process
-- week8 NFT工作坊 (業師)
-- week9 網路負載與效能測試 (JMeter)
-- week10 自動化建置DevSecOps 實作練習
+- Week1 前測+虛擬機說明
+- Week2 網路爬蟲
+- Week3 網路爬蟲
+- Week4 網路爬蟲
+- Week5 Quiz I
+- Week6 Linux 核心編譯
+- Week7 Linux Process
+- Week8 NFT工作坊 (業師)
+- Week9 網路負載與效能測試 (JMeter)
+- Week10 自動化建置DevSecOps 實作練習
+- Week11 Quiz II, 繳交 Term Project 規劃報告
+- Week12 網路程式安全實作 I (業師)
+- Week13 網路傳輸基本概念(TCP/IP, Sockets) 實作練習(環境建置) 
